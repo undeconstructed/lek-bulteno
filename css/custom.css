@@ -1,0 +1,255 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root {
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  font-family: 'Cantarell', var(--font-family-sans-serif);
+  background-color: rgb(50,50,50);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+.paĝo {
+  background-color: white;
+}
+
+.kapo {
+  background-color: #779734;
+  padding: 5mm 5mm 0 5mm;
+  color: white;
+  background-image: url(../header.jpg);
+  background-blend-mode: darken;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 11em;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.kapo .titolo {
+  margin: 0;
+  text-align: right;
+}
+.kapo .titolo .bul {
+  font-size: .9cm;
+  font-family: "Playball", cursive;
+}
+.kapo .titolo .lek {
+  display: block;
+  font-family: "Anton", sans-serif;
+}
+
+.kapo .sub {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.kapo .sub * {
+  padding: 0;
+  margin: 0;
+}
+
+.kapo .ligilo {
+  font-family: "Anton", sans-serif;
+  font-size: .5cm;
+}
+
+.kapo .dato {
+  text-align: right;
+  font-size: .7cm;
+}
+.kapo .dato .monato {
+  font-family: "Anton", sans-serif;
+}
+.kapo .dato .jaro {
+  font-family: "Playball", cursive;
+}
+
+.korpo {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: "unu du";
+  font-family: serif;
+  line-height: 1em;
+  font-size: 1em;
+}
+
+.unu { grid-area: unu; }
+
+.du { grid-area: du; }
+
+.k {
+  padding: 1em;
+}
+
+.k1, .k4 {
+  background-color: #eaedef;
+}
+
+.k1 h3 {
+  font-family: "Playball", cursive;
+  font-size: 10mm;
+  margin: 1mm 0 3mm 0;
+}
+.k1 .evento .tago {
+  font-family: "Playball", cursive;
+  font-size: 7mm;
+}
+.k1 .evento .titolo {
+  font-family: sans-serif;
+  padding: 0 3mm;
+}
+.k1 .evento .titolo .ĉ {
+  font-weight: bold;
+}
+
+.ikon-bildo {
+  display: block;
+  width: 1.2cm;
+  height: 1.2cm;
+  border-radius: .8cm;
+  border: 1px solid black;
+  background-image: url(../person.png);
+  background-size: contain;
+}
+
+.k h2 {
+  font-family: "Anton", sans-serif;
+  color: #982718;
+  line-height: 1cm;
+}
+
+.k p.teksto {
+  text-align: justify;
+}
+
+.k a {
+  color: #982718;
+  text-decoration: none;
+}
+
+.k hr {
+  border: none;
+  border-bottom: 3px solid #779734;
+  width: 60%;
+}
+
+.priklubo h2 {
+  background-color: #779734;
+  color: white;
+  padding: 1mm;
+}
+
+.priklubo h3 {
+  font-family: "Anton", sans-serif;
+  color: #982718;
+  font-size: 110%;
+}
+
+.k4 .map {
+  text-align: center;
+}
+.k4 .map img {
+  border: 1px solid black;
+}
+
+.iubildo {
+  text-align: center;
+}
+
+.subskribo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.subskribo :first-child {
+  flex-grow: 10;
+}
+
+@media screen {
+  .paĝo {
+    min-width: 50em;
+    max-width: 60em;
+    margin: 1em auto;
+    padding: 0;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    border: 1px solid black;
+  }
+
+  .kapo .titolo {
+    line-height: 1.3em;
+  }
+  .kapo .titolo .lek {
+    font-size: 2em;
+  }
+}
+
+@media print {
+  @page {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: none;
+    margin: 0;
+    padding: 0;
+    font-size: 9pt;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .paĝo {
+    /* break-after: always; */
+    break-inside: avoid;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    /* display: flex; */
+    /* flex-flow: column nowrap; */
+    /* border: 1px solid blue; */
+  }
+
+  .kapo .titolo {
+    line-height: 1.2cm;
+  }
+  .kapo .titolo .lek {
+    font-size: 1.8cm;
+  }
+
+  .paĝo.p1 .kapo {
+    height: 5.5cm;
+  }
+  .paĝo.p1 .korpo {
+    height: calc(100% - 5.5cm);
+  }
+  .paĝo .korpo {
+    height: 100%;
+    /* border: 1px solid green; */
+  }
+
+  .k {
+    /* height: 100%; */
+    /* border: 1px solid red; */
+  }
+}
