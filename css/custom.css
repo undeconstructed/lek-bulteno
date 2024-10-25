@@ -6,7 +6,23 @@
 :root {
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --verda: #779734;
+  --ruĝa: #982718;
+  --griza: #eaedef;
+  --num-kolj: 3;
 }
+
+/* helpiloj */
+
+.unu { grid-area: unu; }
+
+.du { grid-area: du; }
+
+.tri { grid-area: tri; }
+
+.kvar { grid-area: kvar; }
+
+/* bazaj stiloj */
 
 body {
   font-family: 'Cantarell', var(--font-family-sans-serif);
@@ -17,21 +33,165 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+h2 {
+  font-family: "Anton", sans-serif;
+  color: var(--ruĝa);
+  line-height: 1cm;
+}
+
+a {
+  color: var(--ruĝa);
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  border-bottom: 3px solid var(--verda);
+  width: 60%;
+}
+
+article p {
+  line-height: 130%;
+  font-family: times;
+}
+article.justigi p {
+  text-align: justify;
+}
+
+.iubildo {
+  text-align: center;
+}
+
 .paĝo {
   background-color: white;
+  border-top: 1em solid var(--verda);
+  border-bottom: 1em solid var(--verda);
+}
+
+.kol {
+  padding: 1em 1em 0 1em;
+}
+
+/* paĝ-specoj */
+
+.paĝo.unu-artikolo article {
+  padding: 0 1em 1em 1em;
+  column-count: var(--num-kolj);
+}
+.paĝo.unu-artikolo article h2 {
+  column-span: all;
+  border-bottom: 3px solid var(--verda);
+}
+
+.paĝo.plur-artikolo {
+  padding: 1em 1em 1em 1em;
+  column-count: var(--num-kolj);
+}
+
+.paĝo.plur-artikolo article {
+  break-inside: avoid-column;
+}
+.paĝo.plur-artikolo article::after {
+  clear: both;
+}
+.paĝo.plur-artikolo hr {
+  break-before: avoid-column;
+  display: none;
+}
+
+/* bildo en cirklo */
+
+.ikon-bildo {
+  display: block;
+  width: 1.5cm;
+  height: 1.5cm;
+  border-radius: .8cm;
+  border: 1px solid black;
+  background-image: url(../person.png);
+  background-size: contain;
+  overflow: hidden;
+}
+.ikon-bildo.pli-granda {
+  width: 1.5cm;
+  height: 1.5cm;
+}
+.ikon-bildo img {
+  width: 100%;
+  height: 100%;
+  border-radius: .8cm;
+  border: 1px solid white;
+}
+
+/* aŭtor-marko */
+
+.subskribo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.subskribo :first-child {
+  flex-grow: 10;
+}
+
+/* foto kaj etikedo */
+
+.foto {
+  clip: auto;
+}
+.foto img {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  object-fit: contain;
+  object-position: center;
+}
+.foto div:first-child {
+  height: 25em;
+  overflow: hidden;
+}
+.foto.granda div:first-child {
+  max-height: 35em;
+  overflow: hidden;
+}
+.foto p {
+  font-size: smaller;
+  margin: 1em;
+  padding: 0;
+}
+
+.foto.granda div:first-child {
+  height: 50em;
+}
+.foto.granda img {
+  object-fit: cover;
+}
+
+/* unua paĝo */
+
+.paĝo.p1 {
+  border-top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 13em 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "kapo kapo"
+    "unu du"; 
 }
 
 .kapo {
-  background-color: #779734;
+  grid-area: kapo;
+  background-color: var(--verda);
   padding: 1em 1em 0 1em;
   color: white;
   background-image: url(../header.jpg);
   background-blend-mode: darken;
   background-size: cover;
+  background-position: 20% 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 11em;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
@@ -65,7 +225,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Anton", sans-serif;
   font-size: .5cm;
 }
-
 .kapo .ligilo a {
   color: inherit !important;
   text-decoration: inherit !important;
@@ -83,138 +242,79 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: .5mm;
 }
 
-.korpo {
-  display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 1fr; 
-  gap: 0px 0px; 
-  grid-template-areas: "unu du";
-  font-family: serif;
-  line-height: 1em;
-  font-size: 1em;
+.p1 .unu {
+  background-color: var(--griza);
 }
 
-.unu { grid-area: unu; }
-
-.du { grid-area: du; }
-
-.k {
-  padding: 1em;
+.programo .kalendaro {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-auto-rows: 4.5em;
+  align-items: center;
 }
-
-.k.griza {
-  background-color: #eaedef;
+.programo .kalendaro h3 {
+  grid-column: 1/4;
 }
-
-.k1 h3 {
+.programo .kalendaro .evento {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / 4;
+  align-items: center;
+}
+.programo .kalendaro h3 {
   font-family: "Playball", cursive;
   font-size: 10mm;
   margin: 1mm 0 3mm 0;
 }
-.k1 .evento .tago {
+.programo .kalendaro .evento .tago {
   font-family: "Playball", cursive;
   font-size: 7mm;
 }
-.k1 .evento .titolo {
+.programo .kalendaro .evento .titolo {
   font-family: sans-serif;
   padding: 0 3mm;
 }
-.k1 .evento .titolo .ĉ {
+.programo .kalendaro .evento .titolo .ĉ {
   font-weight: bold;
 }
 
-.ikon-bildo {
-  display: block;
-  width: 1.2cm;
-  height: 1.2cm;
-  border-radius: .8cm;
-  border: 1px solid black;
-  background-image: url(../person.png);
-  background-size: contain;
-  overflow: hidden;
-}
-.ikon-bildo.pli-granda {
-  width: 1.5cm;
-  height: 1.5cm;
+/* lasta paĝo */
+
+.paĝo.pN {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "unu du"; 
 }
 
-.ikon-bildo img {
-  width: 100%;
-  height: 100%;
-  border-radius: .8cm;
-  border: 1px solid white;
-}
-
-.k h2 {
-  font-family: "Anton", sans-serif;
-  color: #982718;
-  line-height: 1cm;
-}
-
-.k p.teksto {
-  text-align: justify;
-}
-
-.k a {
-  color: #982718;
-  text-decoration: none;
-}
-
-.k hr {
-  border: none;
-  border-bottom: 3px solid #779734;
-  width: 60%;
+.pN .du {
+  background-color: var(--griza);
 }
 
 .priklubo h2 {
-  background-color: #779734;
+  background-color: var(--verda);
   color: white;
   padding: 1mm;
 }
 
-.priklubo h3 {
-  font-family: "Anton", sans-serif;
-  color: #982718;
-  font-size: 110%;
-}
-
-.k4 .map {
+.pN .du .map {
   text-align: center;
 }
-.k4 .map img {
+.pN .du .map img {
   border: 1px solid black;
-}
-
-.iubildo {
-  text-align: center;
-}
-
-article p {
-  line-height: 130%;
-  font-family: times;
-}
-
-article.justigi p {
-  text-align: justify;
-}
-
-.subskribo {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-.subskribo :first-child {
-  flex-grow: 10;
 }
 
 @media screen {
   .paĝo {
-    min-width: 50em;
+    /* min-width: 50em; */
     max-width: 60em;
     margin: 1em auto;
     padding: 0;
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    outline: 1px solid black;
+  }
+  .paĝo::before {
     border: 1px solid black;
   }
 
@@ -224,6 +324,10 @@ article.justigi p {
   .kapo .titolo .lek {
     font-size: 2em;
   }
+
+  .programo td {
+    padding: .4em 0;
+  }
 }
 
 @media print {
@@ -232,30 +336,30 @@ article.justigi p {
     padding: 0;
   }
 
-  html {
-    margin: 0;
-    padding: 0;
-  }
-
   body {
     background: none;
     margin: 0;
     padding: 0;
-    font-size: 9pt;
+    font-size: 11pt;
+  }
+
+  p {
+    margin-bottom: 7pt;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .paĝo {
+    break-inside: avoid;
+    break-after: always;
     height: 100vh;
     width: 100vw;
   }
 
-  .paĝo {
-    /* break-after: always; */
-    break-inside: avoid;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    /* display: flex; */
-    /* flex-flow: column nowrap; */
-    /* border: 1px solid blue; */
+  .paĝo.p1 {
+    grid-template-rows: 5cm 1fr;
   }
 
   .kapo .titolo {
@@ -264,20 +368,29 @@ article.justigi p {
   .kapo .titolo .lek {
     font-size: 1.8cm;
   }
+}
 
-  .paĝo.p1 .kapo {
-    height: 5.5cm;
-  }
-  .paĝo.p1 .korpo {
-    height: calc(100% - 5.5cm);
-  }
-  .paĝo .korpo {
-    height: 100%;
-    /* border: 1px solid green; */
+@media screen and (max-width:50rem) {
+  :root {
+    --num-kolj: 1;
   }
 
-  .k {
-    /* height: 100%; */
-    /* border: 1px solid red; */
+  .paĝo.p1 {
+    display: block;
+  }
+
+  .kapo {
+    height: 25em;
+  }
+  .kapo .titolo {
+    line-height: 1.80em;
+  }
+
+  .foto img {
+    object-fit: contain;
+  }
+
+  .paĝo.pN {
+    display: block;
   }
 }
