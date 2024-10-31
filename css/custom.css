@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   font-family: "Anton", sans-serif;
   color: var(--ruĝa);
-  line-height: 1cm;
+  margin-bottom: 0;
 }
 
 a {
@@ -81,6 +81,7 @@ article.justigi p {
 .paĝo.unu-artikolo article h2 {
   column-span: all;
   border-bottom: 3px solid var(--verda);
+  margin-bottom: .3em;
 }
 
 .paĝo.plur-artikolo {
@@ -296,6 +297,7 @@ article.justigi p {
   background-color: var(--verda);
   color: white;
   padding: 1mm;
+  margin-bottom: .3em;
 }
 
 .pN .du .map {
