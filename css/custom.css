@@ -50,7 +50,7 @@ hr {
   width: 60%;
 }
 
-article p {
+article p, article ul, article ol {
   line-height: 130%;
   font-family: times;
 }
@@ -77,6 +77,7 @@ article.justigi p {
 .paĝo.unu-artikolo article {
   padding: 0 1em 1em 1em;
   column-count: var(--num-kolj);
+  font-size: 115%;
 }
 .paĝo.unu-artikolo article h2 {
   column-span: all;
@@ -90,14 +91,16 @@ article.justigi p {
 }
 
 .paĝo.plur-artikolo article {
-  break-inside: avoid-column;
+  /* break-inside: avoid-column; */
+  font-size: 115%;
 }
 .paĝo.plur-artikolo article::after {
   clear: both;
 }
 .paĝo.plur-artikolo hr {
   break-before: avoid-column;
-  display: none;
+  /* display: none; */
+  margin: 1rem auto;
 }
 
 /* bildo en cirklo */
@@ -147,8 +150,11 @@ article.justigi p {
   object-fit: contain;
   object-position: center;
 }
+.foto.blanka img {
+  background-color: white;
+}
 .foto div:first-child {
-  height: 25em;
+  height: 20em;
   overflow: hidden;
 }
 .foto.granda div:first-child {
@@ -161,11 +167,12 @@ article.justigi p {
   padding: 0;
 }
 
-.foto.granda div:first-child {
-  height: 50em;
-}
 .foto.granda img {
   object-fit: cover;
+}
+
+.foto.granda.tridek div:first-child {
+  height: 30em;
 }
 
 /* unua paĝo */
@@ -277,6 +284,10 @@ article.justigi p {
 }
 .programo .kalendaro .evento .titolo .ĉ {
   font-weight: bold;
+}
+
+.p1 .du {
+  font-size: 115%;
 }
 
 /* lasta paĝo */
