@@ -50,7 +50,7 @@ hr {
   width: 60%;
 }
 
-article p {
+article p, article ul, article ol {
   line-height: 130%;
   font-family: times;
 }
@@ -146,6 +146,9 @@ article.justigi p {
   background-color: black;
   object-fit: contain;
   object-position: center;
+}
+.foto.blanka img {
+  background-color: white;
 }
 .foto div:first-child {
   height: 25em;
