@@ -72,12 +72,17 @@ article.justigi p {
   padding: 1em 1em 0 1em;
 }
 
+p.verso {
+  padding-left: 1em;
+  font-style: italic;
+}
+
 /* paĝ-specoj */
 
 .paĝo.unu-artikolo article {
   padding: 0 1em 1em 1em;
   column-count: var(--num-kolj);
-  font-size: 115%;
+  font-size: 105%;
 }
 .paĝo.unu-artikolo article h2 {
   column-span: all;
@@ -92,7 +97,7 @@ article.justigi p {
 
 .paĝo.plur-artikolo article {
   /* break-inside: avoid-column; */
-  font-size: 115%;
+  font-size: 105%;
 }
 .paĝo.plur-artikolo article::after {
   clear: both;
@@ -171,8 +176,21 @@ article.justigi p {
   object-fit: cover;
 }
 
-.foto.granda.tridek div:first-child {
+.foto.granda.a30 div:first-child {
   height: 30em;
+}
+
+.foto.granda.a25 div:first-child {
+  height: 25em;
+}
+
+.foto.granda.a22 div:first-child {
+  height: 22em;
+}
+
+.foto.malgranda.s4 div:first-child {
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 
 /* unua paĝo */
@@ -287,7 +305,7 @@ article.justigi p {
 }
 
 .p1 .du {
-  font-size: 115%;
+  font-size: 105%;
 }
 
 /* lasta paĝo */
@@ -316,6 +334,11 @@ article.justigi p {
 }
 .pN .du .map img {
   border: 1px solid black;
+}
+
+.pN hr {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
 }
 
 @media screen {
