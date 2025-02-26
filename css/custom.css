@@ -270,6 +270,9 @@ p.verso {
 
 .p1 .unu {
   background-color: var(--griza);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .programo .kalendaro {
@@ -304,6 +307,13 @@ p.verso {
   font-weight: bold;
 }
 
+.pluskadro {
+  margin-bottom: 1em;
+  font-weight: bold;
+  background-color: white;
+  padding: 1em;
+}
+
 .p1 .du {
   font-size: 105%;
 }
@@ -320,6 +330,9 @@ p.verso {
 
 .pN .du {
   background-color: var(--griza);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .priklubo h2 {
