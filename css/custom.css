@@ -72,12 +72,17 @@ article.justigi p {
   padding: 1em 1em 0 1em;
 }
 
+p.verso {
+  padding-left: 1em;
+  font-style: italic;
+}
+
 /* paĝ-specoj */
 
 .paĝo.unu-artikolo article {
   padding: 0 1em 1em 1em;
   column-count: var(--num-kolj);
-  font-size: 115%;
+  font-size: 105%;
 }
 .paĝo.unu-artikolo article h2 {
   column-span: all;
@@ -92,7 +97,7 @@ article.justigi p {
 
 .paĝo.plur-artikolo article {
   /* break-inside: avoid-column; */
-  font-size: 115%;
+  font-size: 105%;
 }
 .paĝo.plur-artikolo article::after {
   clear: both;
@@ -171,8 +176,21 @@ article.justigi p {
   object-fit: cover;
 }
 
-.foto.granda.tridek div:first-child {
+.foto.granda.a30 div:first-child {
   height: 30em;
+}
+
+.foto.granda.a25 div:first-child {
+  height: 25em;
+}
+
+.foto.granda.a22 div:first-child {
+  height: 22em;
+}
+
+.foto.malgranda.s6 div:first-child {
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 
 /* unua paĝo */
@@ -180,12 +198,12 @@ article.justigi p {
 .paĝo.p1 {
   border-top: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 13em 1fr; 
-  gap: 0px 0px; 
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 13em 1fr;
+  gap: 0px 0px;
   grid-template-areas: 
     "kapo kapo"
-    "unu du"; 
+    "unu du";
 }
 
 .kapo {
@@ -252,6 +270,9 @@ article.justigi p {
 
 .p1 .unu {
   background-color: var(--griza);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .programo .kalendaro {
@@ -286,8 +307,15 @@ article.justigi p {
   font-weight: bold;
 }
 
+.pluskadro {
+  margin-bottom: 1em;
+  font-weight: bold;
+  background-color: white;
+  padding: 1em;
+}
+
 .p1 .du {
-  font-size: 115%;
+  font-size: 105%;
 }
 
 /* lasta paĝo */
@@ -297,11 +325,14 @@ article.justigi p {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: 
-    "unu du"; 
+    "unu du";
 }
 
 .pN .du {
   background-color: var(--griza);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .priklubo h2 {
@@ -316,6 +347,11 @@ article.justigi p {
 }
 .pN .du .map img {
   border: 1px solid black;
+}
+
+.pN hr {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
 }
 
 @media screen {
@@ -381,6 +417,25 @@ article.justigi p {
   .kapo .titolo .lek {
     font-size: 1.8cm;
   }
+
+  body.a3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em 0px;
+    grid-template-areas:
+      "p1 p2"
+      "p3 p4";
+  }
+
+  body.a3 .paĝo {
+    width: 50vw;
+  }
+
+  body.a3 .p1 { grid-area: p2; }
+  body.a3 .p2 { grid-area: p3; }
+  body.a3 .p3 { grid-area: p4; }
+  body.a3 .pN { grid-area: p1; }
 }
 
 @media screen and (max-width:50rem) {

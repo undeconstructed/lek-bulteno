@@ -15,3 +15,5 @@ Por fari PDF-on:
   * "Neniu marĝeno"
   * "Printu fonojn"
   * "Kreu PDF-on"
+* Malgrandigu per skripto `paku.sh <dosiero.pdf>`.
+
