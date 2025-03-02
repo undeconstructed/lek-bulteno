@@ -198,12 +198,12 @@ p.verso {
 .paĝo.p1 {
   border-top: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 13em 1fr; 
-  gap: 0px 0px; 
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 13em 1fr;
+  gap: 0px 0px;
   grid-template-areas: 
     "kapo kapo"
-    "unu du"; 
+    "unu du";
 }
 
 .kapo {
@@ -325,7 +325,7 @@ p.verso {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: 
-    "unu du"; 
+    "unu du";
 }
 
 .pN .du {
@@ -417,6 +417,25 @@ p.verso {
   .kapo .titolo .lek {
     font-size: 1.8cm;
   }
+
+  body.a3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em 0px;
+    grid-template-areas:
+      "p1 p2"
+      "p3 p4";
+  }
+
+  body.a3 .paĝo {
+    width: 50vw;
+  }
+
+  body.a3 .p1 { grid-area: p2; }
+  body.a3 .p2 { grid-area: p3; }
+  body.a3 .p3 { grid-area: p4; }
+  body.a3 .p4 { grid-area: p1; }
 }
 
 @media screen and (max-width:50rem) {
