@@ -308,6 +308,7 @@ p.verso {
 }
 
 .pluskadro {
+  margin-top: 1em;
   margin-bottom: 1em;
   font-weight: bold;
   background-color: white;
@@ -342,6 +343,14 @@ p.verso {
   margin-bottom: .3em;
 }
 
+.qroj {
+  text-align: center;
+  width: 100%;
+}
+.qroj img {
+  width: 11em;
+}
+
 .pN .du .map {
   text-align: center;
 }
@@ -351,7 +360,7 @@ p.verso {
 
 .pN hr {
   margin-top: 1.5em;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
 @media screen {
