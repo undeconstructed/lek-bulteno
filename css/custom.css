@@ -158,6 +158,9 @@ p.verso {
 .foto.blanka img {
   background-color: white;
 }
+.foto.senfona img {
+  background-color: transparent;
+}
 .foto div:first-child {
   height: 20em;
   overflow: hidden;
@@ -188,9 +191,8 @@ p.verso {
   height: 22em;
 }
 
-.foto.malgranda.s6 div:first-child {
-  margin-top: 3em;
-  margin-bottom: 3em;
+.foto.malgranda div:first-child {
+  max-height: 10em;
 }
 
 /* unua paĝo */
@@ -198,12 +200,11 @@ p.verso {
 .paĝo.p1 {
   border-top: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-template-rows: 13em 1fr;
-  gap: 0px 0px;
+  gap: .5rem 0px;
   grid-template-areas: 
-    "kapo kapo"
-    "unu du";
+    "kapo"
+    "unu";
 }
 
 .kapo {
@@ -268,11 +269,18 @@ p.verso {
   padding-right: .5mm;
 }
 
-.p1 .unu {
+.paĝo.p2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "unu du";
+}
+
+.p2 .unu {
   background-color: var(--griza);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .programo .kalendaro {
