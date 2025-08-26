@@ -471,3 +471,10 @@ p.verso {
     display: block;
   }
 }
+
+article.kursoj ul {
+  padding-left: 1em;
+}
+article.kursoj ul li {
+  margin-bottom: 1em;
+}
