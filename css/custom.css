@@ -9,7 +9,7 @@
   --verda: #779734;
   --ruĝa: #982718;
   --griza: #eaedef;
-  --num-kolj: 3;
+  --num-kolj: 2;
 }
 
 /* helpiloj */
@@ -179,11 +179,9 @@ p.verso {
 .foto.granda.a30 div:first-child {
   height: 30em;
 }
-
 .foto.granda.a25 div:first-child {
   height: 25em;
 }
-
 .foto.granda.a22 div:first-child {
   height: 22em;
 }
@@ -191,6 +189,12 @@ p.verso {
 .foto.malgranda.s6 div:first-child {
   margin-top: 3em;
   margin-bottom: 3em;
+}
+.foto.malgranda.a20 div:first-child {
+  height: 20em;
+}
+.foto.malgranda.a17 div:first-child {
+  height: 17em;
 }
 
 /* unua paĝo */
@@ -470,11 +474,4 @@ p.verso {
   .paĝo.pN {
     display: block;
   }
-}
-
-article.kursoj ul {
-  padding-left: 1em;
-}
-article.kursoj ul li {
-  margin-bottom: 1em;
 }
