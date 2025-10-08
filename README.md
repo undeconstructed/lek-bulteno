@@ -17,3 +17,7 @@ Por fari PDF-on:
   * "Kreu PDF-on"
 * Malgrandigu per skripto `paku.sh <dosiero.pdf>`.
 
+Por versio en A3:
+
+* Ŝanĝu ĝis `<body class="a3">`
+* Krei PDF per agordo de A3 en Firefox.
