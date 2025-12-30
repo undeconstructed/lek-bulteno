@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200"
+   height="200"
+   viewBox="0 0 52.916665 52.916666"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="demando.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.99597363"
+     inkscape:cx="396.59685"
+     inkscape:cy="239.96619"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="font-variation-settings:'wght' 300;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.329224;stroke-linecap:round"
+       id="rect2"
+       width="60.037567"
+       height="61.631481"
+       x="-4.7817531"
+       y="-5.3130589" />
+    <ellipse
+       style="font-variation-settings:'wght' 300;fill:#2fb700;fill-opacity:1;stroke-width:0.324017;stroke-linecap:round"
+       id="path1"
+       cx="29.81225"
+       cy="23.377453"
+       rx="20.396498"
+       ry="19.923971" />
+    <path
+       style="fill:#2fb700;fill-opacity:1;stroke:none;stroke-width:0.301658px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 7.9695878,42.453591 20.184763,20.975278 29.956902,32.127482 Z"
+       id="path2" />
+    <text
+       xml:space="preserve"
+       style="font-size:29.6204px;line-height:1.25;font-family:Cantarell;-inkscape-font-specification:'Cantarell, @wght=300';font-variation-settings:'wght' 300;letter-spacing:0px;word-spacing:0px;stroke-width:1.11076"
+       x="19.380016"
+       y="32.725578"
+       id="text2"
+       transform="scale(1.0117796,0.98835755)"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         style="stroke-width:1.11076"
+         x="19.380016"
+         y="32.725578">?!</tspan></text>
+  </g>
+</svg>
