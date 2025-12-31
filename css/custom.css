@@ -179,15 +179,15 @@ p.verso {
 .foto.granda.a30 div:first-child {
   height: 30em;
 }
-
+.foto.granda.a26 div:first-child {
+  height: 26em;
+}
 .foto.granda.a25 div:first-child {
   height: 25em;
 }
-
 .foto.granda.a22 div:first-child {
   height: 22em;
 }
-
 .foto.malgranda.s6 div:first-child {
   margin-top: 3em;
   margin-bottom: 3em;
