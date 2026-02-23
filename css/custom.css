@@ -392,6 +392,7 @@ p.verso {
   @page {
     margin: 0;
     padding: 0;
+    /* size: 216mm 303mm; */
   }
 
   body {
@@ -412,6 +413,8 @@ p.verso {
   .paĝo {
     break-inside: avoid;
     break-after: always;
+    /* height: 303mm;
+    width: 216mm; */
     height: 100vh;
     width: 100vw;
   }
