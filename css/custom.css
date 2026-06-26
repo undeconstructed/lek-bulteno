@@ -176,6 +176,9 @@ p.verso {
   object-fit: cover;
 }
 
+.foto.granda.a35 div:first-child {
+  height: 35em;
+}
 .foto.granda.a30 div:first-child {
   height: 30em;
 }
