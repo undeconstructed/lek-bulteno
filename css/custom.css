@@ -107,6 +107,9 @@ p.verso {
   /* display: none; */
   margin: 1rem auto;
 }
+.paĝo.p2 article:not(:first-child) h2 {
+  margin-top: .3em;
+}
 
 /* bildo en cirklo */
 
@@ -158,6 +161,9 @@ p.verso {
 .foto.blanka img {
   background-color: white;
 }
+.foto.senfona img {
+  background-color: transparent;
+}
 .foto div:first-child {
   height: 20em;
   overflow: hidden;
@@ -176,24 +182,28 @@ p.verso {
   object-fit: cover;
 }
 
-.foto.granda.a35 div:first-child {
-  height: 35em;
-}
 .foto.granda.a30 div:first-child {
   height: 30em;
 }
-.foto.granda.a26 div:first-child {
-  height: 26em;
+
+.foto.granda.a28 div:first-child {
+  height: 28em;
 }
+
 .foto.granda.a25 div:first-child {
   height: 25em;
 }
+
 .foto.granda.a22 div:first-child {
   height: 22em;
 }
-.foto.malgranda.s6 div:first-child {
-  margin-top: 3em;
-  margin-bottom: 3em;
+
+.foto.mezgranda div:first-child {
+  max-height: 13em;
+}
+
+.foto.malgranda div:first-child {
+  max-height: 10em;
 }
 
 /* unua paĝo */
@@ -201,12 +211,11 @@ p.verso {
 .paĝo.p1 {
   border-top: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-template-rows: 13em 1fr;
-  gap: 0px 0px;
+  gap: .5rem 0px;
   grid-template-areas: 
-    "kapo kapo"
-    "unu du";
+    "kapo"
+    "unu";
 }
 
 .kapo {
@@ -271,11 +280,18 @@ p.verso {
   padding-right: .5mm;
 }
 
-.p1 .unu {
+.paĝo.p2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "unu du";
+}
+
+.p2 .unu {
   background-color: var(--griza);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .programo .kalendaro {
