@@ -58,6 +58,10 @@ article.justigi p {
   text-align: justify;
 }
 
+article blockquote {
+  font-style: italic;
+}
+
 .iubildo {
   text-align: center;
 }
